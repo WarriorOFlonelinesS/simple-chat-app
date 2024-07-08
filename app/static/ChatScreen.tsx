@@ -37,7 +37,7 @@ const ChatScreen: React.FC<Props> = ({ route }) => {
     flatListRef.current?.scrollToEnd({ animated: true });
   }, [messages]);
 
-  // Возьмем текущего пользователя из Redux state, предположим, что он всегда 'User'
+
   const currentUser = 'User';
 
   const handleSendMessage = () => {
@@ -45,7 +45,7 @@ const ChatScreen: React.FC<Props> = ({ route }) => {
       const message = {
         id: new Date().toISOString(),
         text: newMessage,
-        sender: currentUser, // Отправитель - текущий пользователь
+        sender: currentUser, 
         createdAt: new Date().toISOString(),
         chatId: chatId,
       };
